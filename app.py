@@ -87,6 +87,9 @@ fig2.update_layout(
         color="RebeccaPurple"
     ))
 
+st.plotly_chart(fig2)
+
+
 # ax.set_title('Top 10 Departments with the Biggest Sales Value Increase', fontsize=16)
 # ax.set_xlabel('Mean Percentage Change in Sales Growth', fontsize=14)
 # ax.set_ylabel('Department', fontsize=14)
