@@ -62,7 +62,7 @@ if option == 'Secondary home rate':
 st.plotly_chart(fig)
 
 ###############################################################################
-################### Bubble chart for department & metrics #####################
+################### Year on year sales growth by department ###################
 ###############################################################################
 
 @st.cache
@@ -78,19 +78,14 @@ fig2 = px.bar(yoy_sales_df, x="department_name"
               , y="yoy_sales_growth"
               , orientation='h')
 fig2.update_layout(
-    title="Secondary home rate by department<br><sup>Bubble size indicates sales price per m2</sup><br>",
-    xaxis_title="Department",
-    yaxis_title="Secondary home rate",
+    title="Top 10 Departments with the Biggest Sales Value Increase",
+    xaxis_title="Mean Percentage Change in Sales Growth",
+    yaxis_title="Department",
     font=dict(
         family="Courier New, monospace",
         size=15,
         color="RebeccaPurple"
     ))
+fig2.update_xaxes(tickangle=45)
 
 st.plotly_chart(fig2)
-
-
-# ax.set_title('Top 10 Departments with the Biggest Sales Value Increase', fontsize=16)
-# ax.set_xlabel('Mean Percentage Change in Sales Growth', fontsize=14)
-# ax.set_ylabel('Department', fontsize=14)
-# plt.show()
