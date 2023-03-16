@@ -50,7 +50,7 @@ fig2.update_layout(
         family="Courier New, monospace",
         size=13,
         color="RebeccaPurple"),
-    yaxis_range=[0,200_000_000])
+    yaxis_range=[0,10_000_000])
 fig2.update_xaxes(tickangle=45)
 
 st.write("""#### Bottom 10 Department by average yearly sales value increases from 2017 to 2021""")
