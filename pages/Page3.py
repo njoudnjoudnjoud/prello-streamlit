@@ -29,9 +29,10 @@ fig1.update_layout(
     font=dict(
         family="Courier New, monospace",
         size=13,
-        color="RebeccaPurple"
-    ))
+        color="RebeccaPurple"),
+    yaxis_range=[0,150_000_000])
 fig1.update_xaxes(tickangle=45)
+
 
 st.write("""#### Top 10 Department by average yearly sales value increases from 2017 to 2021""")
 st.plotly_chart(fig1)
@@ -48,8 +49,8 @@ fig2.update_layout(
     font=dict(
         family="Courier New, monospace",
         size=13,
-        color="RebeccaPurple"
-    ))
+        color="RebeccaPurple"),
+    yaxis_range=[0,150_000_000])
 fig2.update_xaxes(tickangle=45)
 
 st.write("""#### Bottom 10 Department by average yearly sales value increases from 2017 to 2021""")
