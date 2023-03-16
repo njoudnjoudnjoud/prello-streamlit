@@ -1,12 +1,13 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from streamlit_extras.colored_header import colored_header
 
 ###############################################################################
 ######################## Secondary Home Rate v. POI ###########################
 ###############################################################################
 
-st.write("""# Secondary home rate by department & POI (places of interest)""")
+st.write("""# Secondary home rate""")
 
 
 @st.cache
@@ -18,7 +19,7 @@ df = get_dfsecpoi()
 
 fig = px.scatter(df, x= 'department_name' , y= "secondary_home_rate", size="poi")
 fig.update_layout(
-    title="Secondary home rate by department<br><sup>Bubble size indicates no. of POIs</sup><br>",
+    title="Bubble size indicates no. of POIs",
     xaxis_title="Department",
     yaxis_title="Secondary home rate (%)",
     font=dict(
@@ -28,4 +29,5 @@ fig.update_layout(
     ))
 fig.update_xaxes(tickangle=45)
 
+st.write("""#### Secondary home rate by department & POIs (places of interest)""")
 st.plotly_chart(fig)

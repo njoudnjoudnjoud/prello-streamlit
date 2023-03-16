@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from streamlit_extras.colored_header import colored_header
 
 st.image('data/prello.png',width=450)
 
@@ -8,8 +9,10 @@ st.image('data/prello.png',width=450)
 ################### Bubble chart for department & metrics #####################
 ###############################################################################
 
+st.write('')
+
 st.markdown('''
-## Bubble chart showing relationship between department & metrics of interest
+#### Sales price / secondary home rate by department
 ''')
 
 st.write('')
