@@ -25,7 +25,7 @@ fig2.update_layout(
     yaxis_title="Avg yearly sales growth (%)",
     font=dict(
         family="Courier New, monospace",
-        size=12,
+        size=13,
         color="RebeccaPurple"
     ))
 fig2.update_xaxes(tickangle=45)
@@ -43,7 +43,7 @@ fig3.update_layout(
     yaxis_title="Avg yearly sales growth (%)",
     font=dict(
         family="Courier New, monospace",
-        size=12,
+        size=13,
         color="RebeccaPurple"
     ))
 fig3.update_xaxes(tickangle=45)
